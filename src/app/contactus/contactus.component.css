@@ -1,0 +1,47 @@
+.all {
+    display: flex;
+}
+
+.left {
+    font-size: 17px;
+    word-spacing: 1.5px;
+    width: 60%;
+    font-size: larger;
+    display: flex;
+    color: slateblue;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.add {
+
+    padding-top: 50px;
+}
+
+.num {
+    padding-top: 50px;
+
+}
+
+.right {
+    padding-left: 200px;
+    padding-top: 50px;
+}
+
+.details {
+
+    color: crimson;
+    column-width: 1000px;
+    padding-left: 120px;
+
+}
+
+.abc {
+    padding-top: 30px;
+    font-weight: 200px;
+    padding-left: 120px;
+    color: dodgerblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+}

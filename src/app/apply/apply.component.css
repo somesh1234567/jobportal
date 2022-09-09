@@ -1,0 +1,16 @@
+.iimg{
+    text-align: center;
+    display:block;
+
+    margin-left: auto;
+
+    margin-right: auto;
+    width: 55%;
+}
+.applied {
+    align-items: center;
+    margin-left: 450px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:darkolivegreen;
+    font-size: 30px;
+}

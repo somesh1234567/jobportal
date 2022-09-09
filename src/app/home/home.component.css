@@ -1,0 +1,91 @@
+.home_section2 .partner{
+
+    overflow: none;
+
+}
+
+.home_section2{
+
+    overflow: none
+
+    ;
+
+}
+
+
+
+.banner .text{
+
+    text-align: center;
+
+    padding-top: 100px;
+
+    padding-bottom: 50px;
+
+    color: black;
+
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+   font-size: 40px;
+
+   font-weight: 500;
+
+ 
+
+
+
+}
+
+
+
+
+.banner{
+
+   
+
+    font-weight: 600;
+
+    font-size: 42px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    color: whitesmoke;
+
+    justify-content:space-evenly;
+
+    background-color: #1a68d3;
+
+    background-image: radial-gradient(ellipse at bottom,#1a68d3 5%,transparent 60%),linear-gradient(136deg,transparent,#71c7ee 290%),linear-gradient(115deg,#9d9af1,transparent 40%),linear-gradient(180deg,transparent 0,#1a68d3 70%),radial-gradient(ellipse at -70% -180%,transparent 80%,#71c7ee 0),radial-gradient(ellipse at bottom,#1a68d3 40%,transparent 80%),radial-gradient(ellipse at 5% 340%,transparent 80%,#bfc2f4 0);
+
+    overflow: hidden;
+
+    padding-bottom: var(--gutter-lg);
+
+    padding-top: calc(var(--ui-header-height) +
+
+80px    
+
+);
+
+
+
+
+  /* Create the parallax scrolling effect */
+
+  background-attachment: fixed;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+
+
+
+  display: flex;
+
+  justify-content: center;
+
+
+
+}

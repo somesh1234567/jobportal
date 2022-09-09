@@ -1,0 +1,68 @@
+.flex-container {
+    display: flex;
+}
+
+.line {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blue;
+    margin-top: 150px;
+    padding: 100px;
+    margin-left: 200px;
+    font-weight: 700;
+    line-height: 2;
+}
+
+.other {
+
+    margin-top: 320px;
+    margin-left: -400px;
+}
+
+.other p {
+    padding-inline: -100px;
+    align-content: center;
+
+    width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    word-wrap: break-word;
+    font-weight: 400;
+    font-size: 17px;
+    word-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+
+.about_image {
+    margin-top: 260px;
+    margin-left: 150px;
+}
+
+.about_image img {
+    border-radius: 50px;
+}
+
+.img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.end {
+    flex-grow: 1;
+}
+
+.end {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    color: dodgerblue;
+    justify-content: space-evenly;
+}
+
+.big {
+    font-size: 54px;
+}
+
+.small {
+    font-size: 30px;
+}

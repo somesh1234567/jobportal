@@ -1,0 +1,66 @@
+
+<div class="banner">    
+<form  #m="ngForm" (ngSubmit)="Auth(m.value)" style="width: 500px;">
+    <br>
+    <!-- {{m.value | json}} -->
+    <span style="margin-left:135px ;font-size: 38px;font-weight: 600">Fill up the Job</span>
+       <br>
+       <br><br>
+        <label><b>Company Name</b></label>
+        <input type="text" name="compname" required ngModel  #u=ngModel class="form-control" [class.val]="u.valid && u.touched" [class.inval]="u.invalid && u.touched" >
+    
+        <div style="background-color: yellow;color:red;">
+            <div *ngIf="u.errors?.['required'] && m.touched">Enter Name</div>
+            </div>
+    
+        <br>
+        <label><b>Title</b></label>
+        <input type="text" name="comptitle" required ngModel #e=ngModel class="form-control">
+        <div style="background-color: yellow;color: purple;">
+            <div *ngIf="e.errors?.['required'] && e.touched">Enter Valid Title</div>
+            </div>
+        <br>
+        <label><b>Description</b></label>
+        <input type="text" name="compdesc" required ngModel #e=ngModel class="form-control">
+        <div style="background-color: yellow;color: purple;">
+            <div *ngIf="e.errors?.['required'] && e.touched">Enter Valid Description</div>
+            </div>
+        <br>     
+    
+        <input type="submit" [disabled]="m.form.invalid" value="Submit" class="btn btn-primary">
+    
+    </form>
+    </div>
+
+   <div class="table" style="margin-bottom: 100px;">
+  <table class="table" >
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Candidate Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Experiances</th>
+        <th scope="col">Resume</th>
+        <th scope="col">Choosed</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        
+      <tr *ngFor="let jobseeker of data let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{jobseeker.candidateid}}</td>
+        <td>{{jobseeker.fname}}</td>
+        <td>{{jobseeker.email}}</td>
+        <td>{{jobseeker.mobile}}</td>
+        <td>{{jobseeker.Experianced}}</td>
+        <td><a href="https://localhost:7139/{{jobseeker.resume}}" style="text-decoration:none ;">{{jobseeker.fname}}'s Resume</a></td>
+      <td>{{jobseeker.status}}</td>
+    </tr>
+     
+    </tbody>
+  </table>
+
+</div>

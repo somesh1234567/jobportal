@@ -1,0 +1,32 @@
+
+
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Candidate Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Experiences</th>
+        <th scope="col">Resume</th>
+        <th scope="col">Select</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        
+      <tr *ngFor="let jobseeker of data let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{jobseeker.candidateid}}</td>
+        <td>{{jobseeker.fname}}</td>
+        <td>{{jobseeker.email}}</td>
+        <td>{{jobseeker.mobile}}</td>
+        <td>{{jobseeker.workstatus ? "Experience" : "Fresher"}}</td>
+        <td><a href="https://localhost:7139/{{jobseeker.resume}}" style="text-decoration:none ;">{{jobseeker.fname}}'s Resume</a></td>
+        <td><button class="btn btn-primary" (click)="accepted(jobseeker.candidateid)">Accepted</button><span style="padding-left: 50px;"></span><button (click)="rejected(jobseeker.candidateid)" class="btn btn-primary">Rejected</button></td>
+    </tr>
+     
+    </tbody>
+  </table>
+

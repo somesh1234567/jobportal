@@ -1,0 +1,72 @@
+
+<style>
+    .val
+    {
+    border:3px solid green
+    }
+    .inval
+    {
+    border: 3px solid red;
+    }
+    
+</style>
+<!-- <div style="width:500px">
+<label>Username</label>
+<input type="text" id="t1" class="form-control" >
+<br><br>
+<label>Password</label>
+<input type="password" id="t2"  class="form-control">
+<br><br>
+<input type="button" value="Login" class="btn btn-primary" (click)="validate()">
+</div>
+
+{{err}} -->
+<div class="banner " style="padding-top:50px ;">
+<form  #m="ngForm" (ngSubmit)="Register(m.value)" enctype="multipart/form-data" style="width: 500px;">
+    <!-- {{m.value | json}} -->
+       
+        <label><b>Fullname: </b></label>
+        <input placeholder="Ex-ankit" type="text" name="fname" required pattern="[a-z]+" ngModel  #u=ngModel class="form-control" [class.val]="u.valid && u.touched" [class.inval]="u.invalid && u.touched" >
+    
+        <div style="background-color: yellow;color:red;">
+            <div *ngIf="u.errors?.['required'] && m.touched">Enter Username</div>
+            <div *ngIf="u.errors?.['pattern'] && m.touched">pls enter only alphebets</div>
+            </div>
+    
+        <br><br>
+        <label><b>Email:</b></label>
+        <input placeholder="Ex- abc@gamil.com" type="email" name="email" required ngModel #e=ngModel class="form-control">
+            <div *ngIf="e.errors?.['required'] && e.touched">Enter Valid Email</div>
+        <br><br>
+        <label><b>Set Password</b> </label>
+        <input placeholder="password" type="password" name="password" required ngModel #e=ngModel class="form-control">
+        <div style="background-color: yellow;color: purple;">
+            <div *ngIf="e.errors?.['required'] && e.touched">Enter Valid Password</div>
+            </div>
+        <br><br>
+        <label><b>Mobile Number:</b></label>
+        <input placeholder="7001739196" type="number" name="mobile" required ngModel #e=ngModel class="form-control">
+        <br><br>
+        <div class="col-md-3">
+            <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;" multiple>
+            <button type="button" class="btn btn-success" (click)="file.click()">Upload File</button>
+          </div>
+          <div class="col-md-4">
+            <span class="upload" *ngIf="progress > 0">
+              {{progress}}%
+            </span>
+            <span class="upload" *ngIf="message">
+              {{message}}
+            </span>
+          </div>
+        <label><b>Select WorkStatus : </b> </label>
+        Fresher<input type="Radio" name="workstatus" ngModel class="form-control" class="radio-control" value=true>
+        Experienced<input type="Radio" name="workstatus" ngModel  class="radio-control" value=false>
+        <br><br>
+        <input  type="text" name="resumes" [value]="filenames" style="display:none ;" class="form-control" >
+
+        <input type="submit" [disabled]="m.form.invalid" value="Register" class="btn btn-primary">
+    
+    
+    </form>
+</div>

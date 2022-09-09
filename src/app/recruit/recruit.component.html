@@ -1,0 +1,18 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Sl No</th>
+        <th scope="col">Fullname</th>
+        <th scope="col">Resume</th>
+        <th scope="col">Recruit</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let i of data let j = index">
+      <tr>
+        <th scope="row">{{j+1}}</th>
+        <td>{{i.Fname}}</td>
+        <td>{{i.Resumes}}</td>
+        <td><button class="btn btn-info">Select</button><button class="btn btn-danger" style="margin-left: 10px;" id="t2" (click)="rem(j)">Reject</button></td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,112 @@
+<div class="banner">
+   
+    <div class="form" style="margin-top: 130px;">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Candidate Login</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Recruitment Login</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Company Login</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <form  #m="ngForm" (ngSubmit)="Authenticate(m.value)" style="width: 500px;">
+                    <br>
+                    <!-- {{m.value | json}} -->
+                       <br>
+                        <label><b>Email</b></label>
+                        <input type="email" name="email" required ngModel  #u=ngModel class="form-control" [class.val]="u.valid && u.touched" [class.inval]="u.invalid && u.touched" >
+                    
+                        <div style="background-color: yellow;color:red;">
+                            <div *ngIf="u.errors?.['required'] && m.touched">Enter email</div>
+                            </div>
+                    
+                        <br><br>
+                        <label><b>Password</b></label>
+                        <input type="password" name="password" required ngModel #e=ngModel class="form-control">
+                        <div style="background-color: yellow;color: purple;">
+                            <div *ngIf="e.errors?.['required'] && e.touched">Enter Valid Password</div>
+                            </div>
+                        <br>    
+                    
+                    
+                        <input type="submit" [disabled]="m.form.invalid" value="Login" class="btn btn-primary">
+                    <br><br>
+                        New User? <a routerLink="/register" style="color:black;"> Click Here</a>
+                    
+                    </form>
+            </div>
+            {{err}}
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <form  #m="ngForm" style="width: 500px;">
+                    <br>
+                    <!-- {{m.value | json}} -->
+                       <br>
+                        <label><b>Username</b></label>
+                        <input type="text" name="fname" id="t1" required ngModel  #u=ngModel class="form-control" [class.val]="u.valid && u.touched" [class.inval]="u.invalid && u.touched" >
+                    
+                        <div style="background-color: yellow;color:red;">
+                            <div *ngIf="u.errors?.['required'] && m.touched">Enter Username</div>
+                            </div>
+                    
+                        <br><br>
+                        <label><b>Password</b></label>
+                        <input type="password" name="password" id="t2" required ngModel #e=ngModel class="form-control">
+                        <div style="background-color: yellow;color: purple;">
+                            <div *ngIf="e.errors?.['required'] && e.touched">Enter Valid Password</div>
+                            </div>
+                        <br>    
+                    
+                    
+                        <input type="submit" value="Login" (click)="validate()" class="btn btn-primary">
+                    <br><br>
+                    </form>
+            </div>
+            {{err1}}
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <form  #es="ngForm" (ngSubmit)="comp(es.value)" style="width: 500px;">
+                    <br>
+                    <!-- {{m.value | json}} -->
+                       <br>
+                        <label><b>Company Name</b></label>
+                        <input type="text" name="username" required ngModel  #g=ngModel class="form-control" [class.val]="u.valid && u.touched" [class.inval]="u.invalid && u.touched" >
+                    
+                        <div style="background-color: yellow;color:red;">
+                            <div *ngIf="u.errors?.['required'] && m.touched">Enter name</div>
+                            </div>
+                    
+                        <br><br>
+                        <label><b>Password</b></label>
+                        <input type="password" name="password" required ngModel #g=ngModel class="form-control">
+                        <div style="background-color: yellow;color: purple;">
+                            <div *ngIf="e.errors?.['required'] && e.touched">Enter Valid Password</div>
+                            </div>
+                        <br>    
+                    
+                    
+                        <input type="submit" [disabled]="es.form.invalid" value="Login" class="btn btn-primary">
+                    
+                    </form>
+            </div>
+            {{err2}}
+          </div>
+        </div>
+
+</div>
+<script>
+var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
+triggerTabList.forEach(function (triggerEl) {
+  var tabTrigger = new bootstrap.Tab(triggerEl)
+
+  triggerEl.addEventListener('click', function (event) {
+    event.preventDefault()
+    tabTrigger.show()
+  })
+})
+
+
+    </script>

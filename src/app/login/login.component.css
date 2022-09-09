@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar_home {
+    float: right;
+    margin-top: -65px;
+}
+
+.banner .logo{
+    color: white;
+    font-weight: 600;
+    font-size: 32px;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+
+.navbar-nav .nav-item a{
+    color: white;
+    font-size: 19px;
+    font-weight: 600;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+
+
+.banner{
+    background-color: #1a68d3;
+    background-image: radial-gradient(ellipse at bottom,#1a68d3 5%,transparent 60%),linear-gradient(136deg,transparent,#71c7ee 290%),linear-gradient(115deg,#9d9af1,transparent 40%),linear-gradient(180deg,transparent 0,#1a68d3 70%),radial-gradient(ellipse at -70% -180%,transparent 80%,#71c7ee 0),radial-gradient(ellipse at bottom,#1a68d3 40%,transparent 80%),radial-gradient(ellipse at 5% 340%,transparent 80%,#bfc2f4 0);
+        height: 100vh;
+    overflow: hidden;
+    padding-bottom: var(--gutter-lg);
+    padding-top: calc(var(--ui-header-height) + 
+80px    
+);
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.nav-tabs button{
+    color: white;
+}
+
+.nav-tabs button{
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+}
+
